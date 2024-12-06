@@ -115,16 +115,36 @@
 # else:
 #   print(f"Your Grade is {student_grade} and you got F Grade")
 
-def user_check(choice):
-  if choice==1:
-    print("You have chosen option 1 and that means you are Admin")
+# def user_check(choice):
+#   if choice==1:
+#     print("You have chosen option 1 and that means you are Admin")
 
-  elif choice==2:
-    print("You have chosen option 2 and that means you are User")
-  elif choice==3:
-    print("You have chosen option 3 and that means you are Guest")
-  else:
-    print("You have chosen invalid option")
+#   elif choice==2:
+#     print("You have chosen option 2 and that means you are User")
+#   elif choice==3:
+#     print("You have chosen option 3 and that means you are Guest")
+#   else:
+#     print("You have chosen invalid option")
  
-enter_choice=int(input("Enter your choice:"))
-user_check(enter_choice)
+# enter_choice=int(input("Enter your choice:"))
+# user_check(enter_choice)
+
+print("Welcome to Treasure Island .Your mission is to find the treasue ")
+choice1=input("You are at a cross road. Where do you want to go? Type 'left' or 'right' ").lower().strip()
+if choice1=="left":
+  choice2=input("You come to a lake. There is a boat in the middle of the lake. Type 'wait' to wait for the boat. Type 'swim' to swim across ").lower().strip()
+  if choice2=="wait":
+    choice3=input("You arrive at the island unharmed. There is a house with three doors. One red, one yellow and one blue. Which color do you choose? ").lower().strip()
+    if choice3=="red":
+      print("Game Over. You chose a door with a fire behind it")
+    elif choice3=="yellow":
+      print("You found the treasure! You Win!")
+    elif choice3=="blue":
+      print("Game Over. You chose a door with a fire behind it")
+    else:
+      print("You chose a door that does not exist. Game Over")
+  else:
+    print("Game Over. You got attacked by an angry trout")
+else:
+  print("Game Over. You fell into a hole")
+  
