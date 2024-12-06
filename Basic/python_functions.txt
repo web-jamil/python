@@ -1,0 +1,432 @@
+### **Python Functions: All Syntaxes and Details**
+
+In Python, a function is a block of reusable code that performs a specific task. Functions make code modular and easier to understand and maintain. Below is a comprehensive guide covering all the syntax and usage of functions in Python.
+
+
+### **Defining a Function**
+
+#### Basic Syntax
+```python
+def function_name(parameters):
+    """
+    Optional docstring describing the function.
+    """
+    # Function body
+    return value  # Optional
+```
+
+#### Example:
+```python
+def greet(name):
+    return f"Hello, {name}!"
+
+print(greet("Alice"))  # Output: Hello, Alice!
+```
+
+### **Types of Functions**
+
+1. **Built-in Functions**:
+   - Examples: `print()`, `len()`, `sum()`, `sorted()`.
+   - These are provided by Python itself.
+
+2. **User-defined Functions**:
+   - Functions created by the user.
+   - Example:
+     ```python
+     def add(a, b):
+         return a + b
+     ```
+
+3. **Anonymous Functions (Lambda)**:
+   - Short functions defined using the `lambda` keyword.
+   - Example:
+     ```python
+     square = lambda x: x ** 2
+     print(square(4))  # Output: 16
+     ```
+
+### **Function Parameters**
+
+#### Positional Parameters
+- Parameters are passed in the order they are defined.
+```python
+def subtract(a, b):
+    return a - b
+
+print(subtract(10, 5))  # Output: 5
+```
+
+#### Default Parameters
+- Parameters with default values.
+```python
+def introduce(name, age=18):
+    return f"My name is {name}, and I am {age} years old."
+
+print(introduce("Alice"))          # Output: My name is Alice, and I am 18 years old.
+print(introduce("Bob", age=25))    # Output: My name is Bob, and I am 25 years old.
+```
+
+#### Keyword Arguments
+- Arguments passed by parameter name.
+```python
+def greet(name, message):
+    return f"{message}, {name}!"
+
+print(greet(name="Alice", message="Good morning"))  # Output: Good morning, Alice!
+```
+
+#### Variable-Length Arguments
+- **`*args`**: Accepts any number of positional arguments.
+- **`**kwargs`**: Accepts any number of keyword arguments.
+
+```python
+def variable_length(*args, **kwargs):
+    print("Positional arguments:", args)
+    print("Keyword arguments:", kwargs)
+
+variable_length(1, 2, 3, key1="value1", key2="value2")
+# Output:
+# Positional arguments: (1, 2, 3)
+# Keyword arguments: {'key1': 'value1', 'key2': 'value2'}
+```
+
+
+### **Return Statement**
+
+- Returns a value from the function.
+- If `return` is omitted, the function returns `None`.
+
+```python
+def add(a, b):
+    return a + b
+
+result = add(5, 3)
+print(result)  # Output: 8
+```
+
+
+### **Docstrings**
+
+- Provide documentation for the function.
+- Accessed using `help()` or `__doc__`.
+
+```python
+def multiply(a, b):
+    """Multiplies two numbers."""
+    return a * b
+
+print(multiply.__doc__)  # Output: Multiplies two numbers.
+```
+
+### **Scope of Variables**
+
+1. **Local Scope**: Variables defined inside a function.
+2. **Global Scope**: Variables defined outside functions.
+3. **Nonlocal Scope**: Variables in the enclosing (non-global) function scope.
+
+```python
+x = 10  # Global variable
+
+def modify():
+    global x
+    x += 5
+
+modify()
+print(x)  # Output: 15
+```
+
+
+### **Anonymous Functions (Lambda)**
+
+- Syntax: `lambda arguments: expression`
+- Used for simple operations.
+
+```python
+double = lambda x: x * 2
+print(double(4))  # Output: 8
+
+numbers = [1, 2, 3, 4]
+squared = map(lambda x: x ** 2, numbers)
+print(list(squared))  # Output: [1, 4, 9, 16]
+```
+
+### **Decorators**
+
+- Modify or enhance a function's behavior.
+
+```python
+def decorator(func):
+    def wrapper():
+        print("Before function call")
+        func()
+        print("After function call")
+    return wrapper
+
+@decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+# Output:
+# Before function call
+# Hello!
+# After function call
+```
+
+### **Recursive Functions**
+
+- A function that calls itself.
+
+```python
+def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+
+print(factorial(5))  # Output: 120
+```
+
+### **Generator Functions**
+
+- Use `yield` to return a sequence of values lazily.
+
+```python
+def generate_numbers(n):
+    for i in range(n):
+        yield i
+
+for num in generate_numbers(5):
+    print(num)
+# Output: 0 1 2 3 4
+```
+
+### **Type Hints**
+
+- Improve code readability by specifying parameter and return types.
+
+```python
+def add(a: int, b: int) -> int:
+    return a + b
+
+print(add(5, 3))  # Output: 8
+```
+
+### **Examples**
+
+#### Basic Calculator
+```python
+def calculator(a, b, operation):
+    """Performs basic arithmetic operations."""
+    if operation == "add":
+        return a + b
+    elif operation == "subtract":
+        return a - b
+    elif operation == "multiply":
+        return a * b
+    elif operation == "divide" and b != 0:
+        return a / b
+    else:
+        return "Invalid operation"
+
+print(calculator(10, 5, "add"))         # Output: 15
+print(calculator(10, 5, "subtract"))    # Output: 5
+print(calculator(10, 5, "divide"))      # Output: 2.0
+```
+
+#### Palindrome Checker
+```python
+def is_palindrome(string: str) -> bool:
+    """Checks if a string is a palindrome."""
+    return string == string[::-1]
+
+print(is_palindrome("radar"))  # Output: True
+print(is_palindrome("hello"))  # Output: False
+```
+
+### **Summary**
+
+- Functions in Python provide structure and reusability.
+- Use parameters, docstrings, and type hints for clarity.
+- Explore advanced features like decorators, recursion, and generators for more powerful code.
+
+### Lambda Expressions in Python: A Comprehensive Guide
+
+A **lambda expression** in Python is a small, anonymous function defined with the `lambda` keyword. Lambda functions can take any number of arguments but have only one expression. The result of the expression is implicitly returned.
+
+
+### **Basic Syntax**
+
+```python
+lambda arguments: expression
+```
+
+- **`arguments`**: Input parameters to the lambda function (like in a regular function).
+- **`expression`**: A single expression computed and returned.
+
+### **Examples and Syntax**
+
+1. **Basic Lambda Example**
+
+```python
+# Lambda to add two numbers
+add = lambda x, y: x + y
+print(add(5, 3))  # Output: 8
+```
+
+2. **Lambda with No Arguments**
+
+```python
+# Lambda with no arguments
+greet = lambda: "Hello, World!"
+print(greet())  # Output: Hello, World!
+```
+
+3. **Lambda with Single Argument**
+
+```python
+# Lambda to square a number
+square = lambda x: x * x
+print(square(4))  # Output: 16
+```
+
+4. **Lambda with Multiple Arguments**
+
+```python
+# Lambda to calculate the average of three numbers
+average = lambda x, y, z: (x + y + z) / 3
+print(average(10, 20, 30))  # Output: 20.0
+```
+
+5. **Lambda Inside Functions**
+
+```python
+# A function that returns a lambda
+def make_multiplier(n):
+    return lambda x: x * n
+
+double = make_multiplier(2)
+print(double(5))  # Output: 10
+```
+
+6. **Lambda with Conditional Expression**
+
+```python
+# Lambda to check if a number is even or odd
+is_even = lambda x: "Even" if x % 2 == 0 else "Odd"
+print(is_even(4))  # Output: Even
+print(is_even(7))  # Output: Odd
+```
+
+7. **Lambda with List Sorting**
+
+```python
+# Sort a list of tuples by the second element
+data = [(1, 'banana'), (2, 'apple'), (3, 'cherry')]
+data.sort(key=lambda x: x[1])
+print(data)  # Output: [(2, 'apple'), (1, 'banana'), (3, 'cherry')]
+```
+
+8. **Lambda in `map()`**
+
+```python
+# Apply a function to every item in a list
+nums = [1, 2, 3, 4]
+squared = list(map(lambda x: x ** 2, nums))
+print(squared)  # Output: [1, 4, 9, 16]
+```
+
+9. **Lambda in `filter()`**
+
+```python
+# Filter even numbers from a list
+nums = [1, 2, 3, 4, 5, 6]
+evens = list(filter(lambda x: x % 2 == 0, nums))
+print(evens)  # Output: [2, 4, 6]
+```
+
+10. **Lambda in `reduce()`**
+
+```python
+from functools import reduce
+
+# Find the product of all numbers in a list
+nums = [1, 2, 3, 4]
+product = reduce(lambda x, y: x * y, nums)
+print(product)  # Output: 24
+```
+
+11. **Lambda with Default Arguments**
+
+```python
+# Lambda with default values for arguments
+add = lambda x, y=5: x + y
+print(add(3))  # Output: 8
+print(add(3, 7))  # Output: 10
+```
+
+12. **Lambda in List Comprehension**
+
+```python
+# Apply a lambda in a list comprehension
+nums = [1, 2, 3, 4]
+squared = [(lambda x: x ** 2)(num) for num in nums]
+print(squared)  # Output: [1, 4, 9, 16]
+```
+
+13. **Lambda with Dictionaries**
+
+```python
+# Sort a dictionary by values using lambda
+data = {'a': 3, 'b': 1, 'c': 2}
+sorted_data = sorted(data.items(), key=lambda item: item[1])
+print(sorted_data)  # Output: [('b', 1), ('c', 2), ('a', 3)]
+```
+
+14. **Lambda in `any()` and `all()`**
+
+```python
+# Check if any number in the list is greater than 10
+nums = [5, 8, 12, 3]
+has_large = any(map(lambda x: x > 10, nums))
+print(has_large)  # Output: True
+```
+
+15. **Lambda in Nested Functions**
+
+```python
+# Nested lambda functions
+nested_lambda = lambda x: lambda y: x + y
+add_10 = nested_lambda(10)
+print(add_10(5))  # Output: 15
+```
+
+
+### **Limitations of Lambda Functions**
+
+1. **Single Expression**: Lambda functions can only have one expression (no multiple statements or complex logic).
+2. **Reduced Readability**: Overusing lambdas can make code harder to read and maintain.
+3. **No Name**: Lambdas are anonymous, which can make debugging more challenging.
+
+
+### **When to Use Lambda Functions**
+
+1. When a function is simple and short-lived.
+2. For functional programming (e.g., with `map()`, `filter()`, `reduce()`).
+3. Inline use in sorting, filtering, or small transformations.
+
+
+### **Alternatives to Lambda**
+
+For complex logic or better readability, prefer using a named function with `def`.
+
+```python
+# Named function for clarity
+def is_even(x):
+    return x % 2 == 0
+
+# Using the named function
+evens = list(filter(is_even, [1, 2, 3, 4, 5, 6]))
+print(evens)  # Output: [2, 4, 6]
+```
+
+This guide covers all key syntaxes, examples, and best practices for using lambda expressions in Python.

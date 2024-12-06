@@ -1,0 +1,1222 @@
+**Programming** in computer science is the process of designing, writing, testing, and maintaining the instructions (called code) that tell a computer how to perform specific tasks. These instructions are written in programming languages, such as Python, C++, Java, or JavaScript, which provide a structured way to communicate with computers.
+
+---
+
+### **Key Aspects of Programming**
+
+#### **1. Problem-Solving**
+Programming starts with identifying a problem and devising a step-by-step solution, often called an **algorithm**. The programmer then translates the algorithm into a language the computer understands.
+
+#### **2. Code and Syntax**
+- **Code** is the set of instructions written by programmers.
+- **Syntax** refers to the rules of a programming language, which dictate how code must be written to avoid errors.
+
+#### **3. Programming Languages**
+A programming language provides tools to:
+- Define variables to store data.
+- Write instructions to process that data.
+- Perform tasks such as calculations, decision-making, and interaction with the user.
+
+Languages are categorized as:
+- **Low-Level Languages**: Closer to machine code (e.g., Assembly, C).
+- **High-Level Languages**: More human-readable and abstract (e.g., Python, Java).
+
+#### **4. Compilation and Interpretation**
+Before execution, code must be translated into machine-readable form:
+- **Compiled Languages** (e.g., C++): Translated entirely into machine code before running.
+- **Interpreted Languages** (e.g., Python): Translated line-by-line during execution.
+
+#### **5. Debugging**
+The process of finding and fixing errors (bugs) in code.
+
+---
+
+### **Why is Programming Important in Computer Science?**
+
+1. **Automation**: Programming allows repetitive tasks to be automated.
+2. **Problem Solving**: Facilitates solving complex problems using algorithms.
+3. **System Development**: Essential for creating software, operating systems, and applications.
+4. **Data Manipulation**: Used to process and analyze large datasets.
+5. **Innovation**: Drives advancements in artificial intelligence, IoT, robotics, and more.
+
+---
+
+### **Types of Programming Paradigms**
+1. **Procedural Programming**:
+   Focuses on sequences of instructions (e.g., C).
+   ```c
+   int main() {
+       printf("Hello, World!");
+       return 0;
+   }
+   ```
+
+2. **Object-Oriented Programming (OOP)**:
+   Organizes code around objects and their interactions (e.g., Java, Python).
+   ```python
+   class Dog:
+       def bark(self):
+           print("Woof!")
+   ```
+
+3. **Functional Programming**:
+   Emphasizes the use of mathematical functions (e.g., Haskell, Lisp).
+   ```python
+   double = lambda x: x * 2
+   print(double(4))  # Output: 8
+   ```
+
+4. **Event-Driven Programming**:
+   Waits for events like button clicks (e.g., JavaScript).
+   ```javascript
+   document.getElementById("btn").addEventListener("click", () => {
+       alert("Button Clicked!");
+   });
+   ```
+
+5. **Logic Programming**:
+   Uses facts and rules to solve problems (e.g., Prolog).
+
+---
+
+### **Examples of Programming Applications**
+1. **Web Development**: Building websites and web applications (HTML, CSS, JavaScript).
+2. **Data Science**: Analyzing and visualizing data (Python, R).
+3. **Game Development**: Creating games (C++, Unity).
+4. **Mobile Apps**: Developing apps for smartphones (Java, Swift).
+5. **Embedded Systems**: Programming microcontrollers (C, Python).
+
+---
+
+In essence, programming is the cornerstone of computer science, enabling us to harness the power of computers to solve real-world problems, build innovative solutions, and create new technology.
+
+
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<small><small><i>\n",
+    "All the IPython Notebooks in **Python Introduction** lecture series by **[Dr. Milaan Parmar](https://www.linkedin.com/in/milaanparmar/)** are available @ **[GitHub](https://github.com/milaan9/01_Python_Introduction)**\n",
+    "</i></small></small>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Python Programming\n",
+    "\n",
+    "Python is a powerful multipurpose programming language created by *Guido van Rossum*.\n",
+    "\n",
+    "It has a simple and easy-to-use syntax, making it a popular first-choice programming language for beginners.\n",
+    "\n",
+    "This is a comprehensive guide that explores the reasons you should consider learning Python and the ways you can get started with Python.\n",
+    "\n",
+    "If you directly want to get started with Python, visit our **[Python Classes](https://github.com/milaan9/01_Python_Introduction/blob/main/000_Intro_to_Python.ipynb)**."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## What is Python Programming Language?\n",
+    "\n",
+    "Python is an interpreted, object-oriented, high-level programming language. As it is general-purpose, it has a wide range of applications from web development, building desktop GUI to scientific and mathematical computing.\n",
+    "\n",
+    "Python is popular for its simple and relatively straightforward syntax. Its syntax readability increases productivity as it allows us to focus more on the problem rather than structuring the code."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Features of Python Programming"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Simple and easy to learn\n",
+    "Python has a very simple and elegant syntax. It is much easier to read and write programs in Python compared to other languages like C, C++, or Java.\n",
+    "\n",
+    "Due to this reason, many beginners are introduced to programming with Python as their first programming language.\n",
+    "\n",
+    "### Free and open-source\n",
+    "You can freely use and distribute Python programs even for commercial use. As it is open-source, you can even change Python's source code to fit your use case.\n",
+    "\n",
+    "### Portability\n",
+    "A single Python program can run on different platforms without any change in source code. It runs on almost all platforms including Windows, Mac OS X, and Linux.\n",
+    "\n",
+    "### Extensible and Embeddable\n",
+    "You can combine Python code with other programming languages like C or Java to increase efficiency. This allows high performance and scripting capabilities that other languages do not provide out of the box.\n",
+    "\n",
+    "### High-Level Interpreted Language\n",
+    "Python itself handles tasks like memory management and garbage collection. So unlike C or C++, you don't have to worry about system architecture or any other lower-level operations.\n",
+    "\n",
+    "### Rich library and large community\n",
+    "Python has numerous reliable built-in libraries. Python programmers have developed tons of free and open-source libraries, so you don't have to code everything by yourself.\n",
+    "\n",
+    "The Python community is very large and evergrowing. If you encounter errors while programming in Python, it's like that it has already been asked and solved by someone in this community."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Reasons to Choose Python as First Language"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 1. Simple Elegant Syntax\n",
+    "\n",
+    "Programming in Python is fun. It's easier to understand and write Python code. The syntax feels natural. Let's take the following example where we add two numbers:\n",
+    "\n",
+    "```python\n",
+    "a = 2\n",
+    "b = 3\n",
+    "sum = a + b\n",
+    "print(sum)\n",
+    "```\n",
+    "\n",
+    "Even if you have never programmed before, you can easily guess that this program adds two numbers and displays it."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 2. Not overly strict\n",
+    "\n",
+    "You don't need to define the type of a variable in Python. Also, it's not necessary to add a semicolon at the end of the statement.\n",
+    "\n",
+    "Python enforces you to follow good practices (like proper indentation). These small things can make learning much easier for beginners."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 3. The expressiveness of the language\n",
+    "\n",
+    "Python allows you to write programs having greater functionality with fewer lines of code. Let's look at code to swap the values of two variables. It can be done in Python with the following lines of code:\n",
+    "\n",
+    "```python\n",
+    "a = 15\n",
+    "b = 27\n",
+    "print(f'Before swapping: a, b = {a},{b}')\n",
+    "a, b = b, a\n",
+    "print(f'After swapping: a, b = {a},{b}')\n",
+    "```\n",
+    "\n",
+    "Here, we can see that the code is very less and more readable.\n",
+    "\n",
+    "If instead, we were to use Java, the same program would have to be written in the following way:\n",
+    "\n",
+    "```python\n",
+    "public class Swap {\n",
+    " public static void main(String[] args) {\n",
+    "   int a, b, temp;\n",
+    "   a = 15;\n",
+    "   b = 27;\n",
+    "   System.out.println(\"Before swapping : a, b = \"+a+\", \"+ + b);\n",
+    "   temp = a;\n",
+    "   a = b;\n",
+    "   b = temp;   \n",
+    "   System.out.println(\"After swapping : a, b = \"+a+\", \"+ + b);\n",
+    " }\n",
+    " }\n",
+    "```\n",
+    "\n",
+    "This is just an example. There are many more such cases where Python increases efficiency by reducing the amount of code required to program something."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Python Applications Area\n",
+    "\n",
+    "Python is known for its **general purpose** nature that makes it applicable in almost each domain of software development. Python as a whole can be used in any sphere of development. \n",
+    "\n",
+    "\n",
+    "Here, we are **specifing applications** areas where python can be applied.\n",
+    "\n",
+    "1. **Web Applications**\n",
+    "    - We can use Python to develop web applications. It provides libraries to handle internet protocols such as HTML and XML, JSON, Email processing, request, beautifulSoup, Feedparser etc. It also provides Frameworks such as Django, Pyramid, Flask etc to design and delelop web based applications. Some important developments are: PythonWikiEngines, Pocoo, PythonBlogSoftware etc.\n",
+    "\n",
+    "2. **AI & Machine Learning** \n",
+    "    - Python has Prebuilt Libraries like Numpy for scientific computation, Scipy for advanced computing and Pybrain for machine learning (Python Machine Learning) making it one of the best languages For AI.\n",
+    "\n",
+    "3. **Desktop GUI Applications**\n",
+    "    - Python provides Tk GUI library to develop user interface in python based application. Some other useful toolkits wxWidgets, Kivy, pyqt that are useable on several platforms. The Kivy is popular for writing multitouch applications.\n",
+    "\n",
+    "4. **Software Development** \n",
+    "    - Python is helpful for software development process. It works as a support language and can be used for build control and management, testing etc.\n",
+    "\n",
+    "5. **Scientific and Numeric** \n",
+    "    - Python is popular and widely used in scientific and numeric computing. Some useful library and package are SciPy, Pandas, IPython etc. SciPy is group of packages of engineering, science and mathematics.\n",
+    "\n",
+    "6. **Business Applications** \n",
+    "    - Python is used to build Bussiness applications like ERP and e-commerce systems. Tryton is a high level application platform.\n",
+    "\n",
+    "7. **Console Based Application** \n",
+    "    - We can use Python to develop console based applications. For example: IPython.\n",
+    "\n",
+    "8. **Audio or Video based Applications** \n",
+    "    - Python is awesome to perform multiple tasks and can be used to develop multimedia applications. Some of real applications are: TimPlayer, cplay etc.\n",
+    "\n",
+    "9. **3D CAD Applications** \n",
+    "    - To create CAD application Fandango is a real application which provides full features of CAD.\n",
+    "\n",
+    "10. **Enterprise Applications** \n",
+    "    - Python can be used to create applications which can be used within an Enterprise or an Organization. Some real time applications are: OpenErp, Tryton, Picalo etc.\n",
+    "\n",
+    "11. **Applications for Images** \n",
+    "    - Using Python several application can be developed for image. Applications developed are: VPython, Gogh, imgSeek etc.\n",
+    "\n",
+    "12. **Games and 3D Graphics** \n",
+    "    - PyGame, PyKyra are two frameworks for game-development with Python. Apart from these, we also get a variety of 3D-rendering libraries. If you’re one of those game-developers, you can check out PyWeek, a semi-annual game programming contest."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 4. Great Community and Support\n",
+    "\n",
+    "Python has a large supporting community. There are numerous active online forums which can come in handy if you are stuck anywhere in the learning process. Some of them are:\n",
+    "\n",
+    "* **[Learn Python subreddit](https://www.reddit.com/r/learnpython)**\n",
+    "* **[Google Forum for Python](https://groups.google.com/forum/#!forum/comp.lang.python)**\n",
+    "* **[Python Questions - Stack Overflow](https://stackoverflow.com/questions/tagged/python)**"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## How you can learn to code in Python?"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Learn Python from Dr. Milaan Parmar\n",
+    "\n",
+    "Programiz offers dozens of tutorials and examples to help you learn Python programming from scratch. Each tutorial is written in-depth with examples and detailed explanations.\n",
+    "\n",
+    "### Learn Python from Books\n",
+    "\n",
+    "It is always a good idea to learn to program from books. You will get the big picture of programming concepts in the book which you may not find elsewhere.\n",
+    "\n",
+    "Here are 3 books we personally recommend.\n",
+    "\n",
+    "* **[Think Python: How to Think Like a Computer Scientist](http://amzn.to/2dVg5rG)** - a hands-on guide to start learning Python with lots of exercise materials\n",
+    "* **[Starting out With Python](http://amzn.to/2diJu8Z)** - introductory programming book for students with limited programming experience\n",
+    "* **[Effective Python: 59 Specific Ways to Write Better Python](http://amzn.to/2e2EiJt)** - an excellent book for learning to write robust, efficient and maintainable code in Python\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Final Words\n",
+    "\n",
+    "I personally think Python is a terrific language to learn.\n",
+    "\n",
+    "If you are getting started in programming, Python is an awesome choice. You will be amazed by how much you can do in Python once you know the basics.\n",
+    "\n",
+    "It is easy to overlook the fact that Python is a powerful language. Not only is Python good for learning programming, but it is also a good language to have in your arsenal.\n",
+    "\n",
+    "Python can help you to get started in everything, whether it is changing your idea into a prototype, creating a game, or getting in Machine Learning and Artificial Intelligence."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "hide_input": false,
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.9"
+  },
+  "toc": {
+   "base_numbering": 1,
+   "nav_menu": {},
+   "number_sections": true,
+   "sideBar": true,
+   "skip_h1_title": false,
+   "title_cell": "Table of Contents",
+   "title_sidebar": "Contents",
+   "toc_cell": false,
+   "toc_position": {},
+   "toc_section_display": true,
+   "toc_window_display": false
+  },
+  "varInspector": {
+   "cols": {
+    "lenName": 16,
+    "lenType": 16,
+    "lenVar": 40
+   },
+   "kernels_config": {
+    "python": {
+     "delete_cmd_postfix": "",
+     "delete_cmd_prefix": "del ",
+     "library": "var_list.py",
+     "varRefreshCmd": "print(var_dic_list())"
+    },
+    "r": {
+     "delete_cmd_postfix": ") ",
+     "delete_cmd_prefix": "rm(",
+     "library": "var_list.r",
+     "varRefreshCmd": "cat(var_dic_list()) "
+    }
+   },
+   "types_to_exclude": [
+    "module",
+    "function",
+    "builtin_function_or_method",
+    "instance",
+    "_Feature"
+   ],
+   "window_display": false
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
+
+
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<small><small><i>\n",
+    "All the IPython Notebooks in **Python Introduction** lecture series by **[Dr. Milaan Parmar](https://www.linkedin.com/in/milaanparmar/)** are available @ **[GitHub](https://github.com/milaan9/01_Python_Introduction)**\n",
+    "</i></small></small>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Python Hello, World\n",
+    "\n",
+    "**Python** is easy to learn and code and can be execute with python **interpreter**. We can also use Python **interactive shell** to test python code immediately. A simple hello world example is given below. Write below code in a file and save with **.py** extension. Python source file has **.pyextension**. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "heading_collapsed": true
+   },
+   "source": [
+    "### Writing the “Hello, World!” Program\n",
+    "\n",
+    "Now that we have Python up and running, we can write our first Python program.\n",
+    "\n",
+    "Let's create a very simple program called **`Hello World`**. A \"**Hello, World!**\" is a simple program that outputs **`Hello, World!`** on the screen. Since it's a very simple program, it's often used to introduce a new programming language to beginners.\n",
+    "\n",
+    "```python\n",
+    "print(\"Hello, World!\")\n",
+    "```\n",
+    "\n",
+    "Congratulations! You just wrote your first program in Python.\n",
+    "\n",
+    "As you can see, this was a pretty easy task. This is the beauty of Python programming language."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "heading_collapsed": true
+   },
+   "source": [
+    "### Let’s break down the different components of the code.\n",
+    "\n",
+    "1. **`print()`** is a function that tells the computer to perform an action. We know it is a function because it uses parentheses. print() tells Python to display or output whatever we put in the parentheses. By default, this will output to the current terminal window.\n",
+    "\n",
+    "2. Some functions, like the **[print()](https://github.com/milaan9/04_Python_Functions/blob/main/002_Python_Functions_Built_in/051_Python_print%28%29.ipynb)** function, are **[built-in functions](https://github.com/milaan9/04_Python_Functions/tree/main/002_Python_Functions_Built_in)** included in Python by default. These built-in functions are always available for us to use in programs that we create. We can also define **our own functions** that we construct ourselves through other elements.\n",
+    "\n",
+    "3. Inside the parentheses of the **`print()`** function is a sequence of characters — **Hello, World!** — that is enclosed in quotation marks **`'`** or **`\"`**. Any characters that are inside of quotation marks are called a **string**.\n",
+    "\n",
+    "4. Once we are done writing our program, **save** the file and we can exit notepad.\n",
+    "\n",
+    "Once you exit out of notpad you’ll return to your shell or cmd.  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Running the “Hello, World!” Program\n",
+    "\n",
+    "The hello.py program that you just created will cause your terminal to produce the following output:\n",
+    "\n",
+    "```python\n",
+    "Hello, World!\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "ExecuteTime": {
+     "end_time": "2021-10-02T05:54:05.446620Z",
+     "start_time": "2021-10-02T05:54:05.428063Z"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hello, World!\n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"Hello, World!\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Congratulations!** You have written the “Hello, World!” program in **Python 3**.\n",
+    "Since the program ran, you can now confirm that **Python 3** is properly installed and that the program is **syntactically correct**."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### How to print blank lines\n",
+    "\n",
+    "Sometimes you need to print one blank line in your Python program. Following are an example to perform this task.\n",
+    "\n",
+    "#### Example:\n",
+    "\n",
+    "Let us print 8 blank lines. You can type:\n",
+    "\n",
+    "```python\n",
+    ">>>print (9 * \"\\n\")\n",
+    "```\n",
+    "or\n",
+    "\n",
+    "```python\n",
+    ">>>print (\"\\n\\n\\n\\n\\n\\n\\n\\n\\n\")\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {
+    "ExecuteTime": {
+     "end_time": "2021-10-02T05:54:05.600914Z",
+     "start_time": "2021-10-02T05:54:05.450525Z"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hello World!\n",
+      "\n",
+      "\n",
+      "\n",
+      "\n",
+      "\n",
+      "\n",
+      "\n",
+      "\n",
+      "\n",
+      "\n",
+      "Hello World!\n"
+     ]
+    }
+   ],
+   "source": [
+    "print (\"Hello World!\")\n",
+    "print (9 * \"\\n\")\n",
+    "print (\"Hello World!\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {
+    "ExecuteTime": {
+     "end_time": "2021-10-02T05:54:05.756188Z",
+     "start_time": "2021-10-02T05:54:05.604821Z"
+    },
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Jan\n",
+      "Feb\n",
+      "Mar\n",
+      "Apr\n",
+      "May\n",
+      "Jun\n",
+      "Jul\n",
+      "Aug\n",
+      "Sep\n",
+      "Oct\n",
+      "Nov\n",
+      "Dec\n"
+     ]
+    }
+   ],
+   "source": [
+    "print (\"Jan\\nFeb\\nMar\\nApr\\nMay\\nJun\\nJul\\nAug\\nSep\\nOct\\nNov\\nDec\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "ExecuteTime": {
+     "end_time": "2021-10-02T05:54:05.924154Z",
+     "start_time": "2021-10-02T05:54:05.762046Z"
+    },
+    "scrolled": true
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "I want \\n to be printed.\n",
+      "I'm very *happy*\n"
+     ]
+    }
+   ],
+   "source": [
+    "print (\"I want \\\\n to be printed.\")\n",
+    "print(\"I'm very *happy*\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {
+    "ExecuteTime": {
+     "end_time": "2021-10-02T05:54:06.062828Z",
+     "start_time": "2021-10-02T05:54:05.929039Z"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hello\tWorld!\n"
+     ]
+    }
+   ],
+   "source": [
+    "print (\"Hello\\tWorld!\") # \\t is equal to 4 spaces"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {
+    "ExecuteTime": {
+     "end_time": "2021-10-02T05:54:06.187828Z",
+     "start_time": "2021-10-02T05:54:06.066736Z"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Routine:\n",
+      "\t- Eat\n",
+      "\t- Study\n",
+      "\t- Sleep\n",
+      "\t- Repeat\n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "print (\"\"\"\n",
+    "Routine:\n",
+    "\\t- Eat\n",
+    "\\t- Study\n",
+    "\\t- Sleep\\n\\t- Repeat\n",
+    "\"\"\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Print end command\n",
+    "\n",
+    "By default, python's **`print()`** function ends with a newline. This function comes with a parameter called **`end`**. The default value of this parameter is **`\\n`**, i.e., the new line character. You can end a print statement with any character or string using this parameter. This is available in only in **Python 3+**\n",
+    "\n",
+    "#### Example 1:\n",
+    "\n",
+    "```python\n",
+    ">>>print (\"Welcome to\", end = ' ') \n",
+    ">>>print (\"Python\", end = '!')`\n",
+    "\n",
+    "Welcome to Python!\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {
+    "ExecuteTime": {
+     "end_time": "2021-10-02T05:54:06.309901Z",
+     "start_time": "2021-10-02T05:54:06.200522Z"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Welcome to Python!"
+     ]
+    }
+   ],
+   "source": [
+    "print (\"Welcome to\", end = ' ') \n",
+    "print (\"Python\", end = '!')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "#### Example 2:\n",
+    "\n",
+    "```python\n",
+    ">>>print(\"Python\" , end = '@')\n",
+    "\n",
+    "Python@\n",
+    "```"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "metadata": {
+    "ExecuteTime": {
+     "end_time": "2021-10-02T05:54:06.417317Z",
+     "start_time": "2021-10-02T05:54:06.315757Z"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Python @"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"Python \" , end = '@') # ends the output with '@'."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {
+    "ExecuteTime": {
+     "end_time": "2021-10-02T05:54:06.540364Z",
+     "start_time": "2021-10-02T05:54:06.422203Z"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "_M_M_M_M_M_M_M_M_M\n"
+     ]
+    }
+   ],
+   "source": [
+    "print ('_M'*9)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {
+    "ExecuteTime": {
+     "end_time": "2021-10-02T05:54:06.663900Z",
+     "start_time": "2021-10-02T05:54:06.543296Z"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hello Hello Hello Hello Hello Hello \n"
+     ]
+    }
+   ],
+   "source": [
+    "print(\"Hello \" * 6)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "hide_input": false,
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.9"
+  },
+  "toc": {
+   "base_numbering": 1,
+   "nav_menu": {},
+   "number_sections": true,
+   "sideBar": true,
+   "skip_h1_title": false,
+   "title_cell": "Table of Contents",
+   "title_sidebar": "Contents",
+   "toc_cell": false,
+   "toc_position": {},
+   "toc_section_display": true,
+   "toc_window_display": true
+  },
+  "varInspector": {
+   "cols": {
+    "lenName": 16,
+    "lenType": 16,
+    "lenVar": 40
+   },
+   "kernels_config": {
+    "python": {
+     "delete_cmd_postfix": "",
+     "delete_cmd_prefix": "del ",
+     "library": "var_list.py",
+     "varRefreshCmd": "print(var_dic_list())"
+    },
+    "r": {
+     "delete_cmd_postfix": ") ",
+     "delete_cmd_prefix": "rm(",
+     "library": "var_list.r",
+     "varRefreshCmd": "cat(var_dic_list()) "
+    }
+   },
+   "types_to_exclude": [
+    "module",
+    "function",
+    "builtin_function_or_method",
+    "instance",
+    "_Feature"
+   ],
+   "window_display": false
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
+
+
+**Python keywords** are reserved words that have predefined meanings in the Python programming language. They cannot be used as identifiers (variable names, function names, etc.) because they serve a specific purpose in the language's syntax and structure.
+
+---
+
+### **List of Python Keywords**
+As of Python 3.x, here are all the keywords (retrieved via `keyword.kwlist`):
+
+```python
+import keyword
+print(keyword.kwlist)
+```
+
+Output:
+```
+['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await',
+ 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 
+ 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 
+ 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']
+```
+
+---
+
+### **Detailed Explanation of Python Keywords**
+
+#### **1. Boolean and None**
+- **`True`**: Represents the boolean value `True`.
+- **`False`**: Represents the boolean value `False`.
+- **`None`**: Represents a null value or no value at all.
+
+```python
+x = True
+y = False
+z = None
+```
+
+#### **2. Logical Operators**
+- **`and`**: Logical AND.
+- **`or`**: Logical OR.
+- **`not`**: Logical NOT.
+
+```python
+x = True and False  # False
+y = not True        # False
+```
+
+#### **3. Control Flow**
+- **`if`, `elif`, `else`**: Conditional branching.
+- **`for`**: Loop over a sequence.
+- **`while`**: Loop as long as a condition is true.
+- **`break`**: Exit the nearest enclosing loop.
+- **`continue`**: Skip to the next iteration of the loop.
+- **`pass`**: Placeholder for a block of code.
+
+```python
+for i in range(5):
+    if i == 2:
+        break
+    elif i == 1:
+        continue
+    print(i)  # Output: 0, 1
+```
+
+#### **4. Exception Handling**
+- **`try`, `except`, `finally`**: Handle exceptions.
+- **`raise`**: Raise an exception.
+
+```python
+try:
+    x = 1 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+finally:
+    print("Cleanup code")
+```
+
+#### **5. Function and Class**
+- **`def`**: Define a function.
+- **`return`**: Return a value from a function.
+- **`class`**: Define a class.
+
+```python
+class MyClass:
+    def greet(self):
+        return "Hello!"
+```
+
+#### **6. Context Management**
+- **`with`**: Manage resources, ensuring proper acquisition and release.
+- **`as`**: Assign an alias in `with` or `import`.
+
+```python
+with open("file.txt", "r") as file:
+    content = file.read()
+```
+
+#### **7. Importing**
+- **`import`**: Import a module.
+- **`from`**: Import specific parts of a module.
+
+```python
+from math import sqrt
+print(sqrt(16))  # 4.0
+```
+
+#### **8. Variable Scope**
+- **`global`**: Declare a variable as global.
+- **`nonlocal`**: Refer to a variable in the nearest enclosing scope.
+
+```python
+def outer():
+    x = 10
+    def inner():
+        nonlocal x
+        x += 5
+    inner()
+    print(x)  # Output: 15
+```
+
+#### **9. Async Programming**
+- **`async`**: Declare an asynchronous function.
+- **`await`**: Pause execution until a coroutine completes.
+
+```python
+import asyncio
+
+async def greet():
+    print("Hello!")
+    await asyncio.sleep(1)
+
+asyncio.run(greet())
+```
+
+#### **10. Lambda Functions**
+- **`lambda`**: Define an anonymous function.
+
+```python
+square = lambda x: x * x
+print(square(4))  # 16
+```
+
+#### **11. Miscellaneous**
+- **`is`**: Check object identity.
+- **`in`**: Check membership.
+- **`assert`**: Assert a condition.
+- **`del`**: Delete an object.
+
+```python
+x = [1, 2, 3]
+assert 2 in x
+del x[1]  # Deletes the second element
+```
+
+---
+
+### **How to Check Keywords Programmatically**
+Python provides the `keyword` module to work with keywords.
+
+```python
+import keyword
+
+# Check if a word is a keyword
+print(keyword.iskeyword("while"))  # True
+print(keyword.iskeyword("hello"))  # False
+```
+
+---
+
+### **Usage Tips**
+1. **Reserved Words**: Do not use keywords as variable or function names.
+   ```python
+   def def():  # SyntaxError: invalid syntax
+       pass
+   ```
+2. **Syntax Rules**: Ensure keywords are used appropriately within Python's syntax.
+
+If you'd like details on any specific keyword, let me know!
+
+
+
+### **Python Identifiers: Overview**
+
+In Python, an **identifier** is the name used to identify variables, functions, classes, modules, or other objects. Identifiers are user-defined names that must follow specific rules to ensure the code is valid.
+
+---
+
+### **Rules for Creating Python Identifiers**
+1. **Allowed Characters**:
+   - Identifiers can only contain **letters** (A-Z, a-z), **digits** (0-9), and **underscores** (`_`).
+   - They **cannot start with a digit**.
+     ```python
+     valid_name = 10     # Valid
+     _valid_name = 20    # Valid
+     1invalid_name = 30  # Invalid
+     ```
+
+2. **Case Sensitivity**:
+   - Python is case-sensitive, so `myVariable`, `MyVariable`, and `MYVARIABLE` are treated as distinct identifiers.
+     ```python
+     myVariable = 10
+     MyVariable = 20
+     print(myVariable)  # 10
+     ```
+
+3. **Cannot Use Keywords**:
+   - Identifiers cannot use Python **keywords** (e.g., `if`, `while`, `return`).
+     ```python
+     if = 10  # Invalid, raises SyntaxError
+     ```
+
+4. **Special Symbols**:
+   - Identifiers **cannot contain special symbols** like `@`, `$`, `%`, `-`, or spaces.
+     ```python
+     valid_name = 10       # Valid
+     invalid-name = 20     # Invalid
+     invalid name = 30     # Invalid
+     ```
+
+5. **Length**:
+   - Identifiers can be of any length, but readability and convention are important.
+
+---
+
+### **Best Practices for Naming Identifiers**
+1. **Meaningful Names**:
+   - Choose descriptive names for better readability.
+     ```python
+     area_of_circle = 3.14 * r * r  # Clear and meaningful
+     a = 3.14 * r * r               # Avoid
+     ```
+
+2. **Use Snake Case for Variables and Functions**:
+   - Use lowercase letters separated by underscores for multi-word identifiers.
+     ```python
+     user_name = "Alice"
+     def calculate_area(radius):
+         pass
+     ```
+
+3. **Use PascalCase for Class Names**:
+   - Start each word with an uppercase letter and do not use underscores.
+     ```python
+     class MyClass:
+         pass
+     ```
+
+4. **Constants in Uppercase**:
+   - Use all uppercase letters for constants.
+     ```python
+     PI = 3.14
+     MAX_LIMIT = 100
+     ```
+
+5. **Avoid Single Letters for Global Variables**:
+   - Single-letter names like `x` or `y` should be limited to loop variables or very short contexts.
+
+---
+
+### **Special Cases with Underscores**
+1. **Single Leading Underscore (_name)**:
+   - Indicates that the identifier is intended for internal/private use.
+   - By convention, such identifiers are not meant to be accessed directly.
+     ```python
+     _internal_var = 42
+     ```
+
+2. **Double Leading Underscore (__name)**:
+   - Used to name-mangle class attributes to avoid conflicts with subclasses.
+     ```python
+     class MyClass:
+         def __init__(self):
+             self.__private_var = 10
+     ```
+
+3. **Double Leading and Trailing Underscores (__name__)**:
+   - Reserved for special methods or "magic methods" in Python, such as `__init__`, `__str__`, etc.
+     ```python
+     class MyClass:
+         def __init__(self):
+             pass
+     ```
+
+4. **Single Underscore (_) by Itself**:
+   - Commonly used as a temporary variable or to indicate a value is unused.
+     ```python
+     for _ in range(5):
+         print("Hello!")
+     ```
+
+---
+
+### **Identifier Examples**
+
+| **Identifier**   | **Valid/Invalid** | **Reason**                                           |
+|-------------------|-------------------|-----------------------------------------------------|
+| `name`           | Valid             | Follows all rules                                   |
+| `_name`          | Valid             | Starts with an underscore                          |
+| `name_123`       | Valid             | Contains letters, digits, and underscores          |
+| `123name`        | Invalid           | Cannot start with a digit                          |
+| `user-name`      | Invalid           | Contains a hyphen, which is not allowed            |
+| `class`          | Invalid           | `class` is a reserved keyword                      |
+| `__magic__`      | Valid             | Allowed, but reserved for special use in Python    |
+
+---
+
+### **Checking Valid Identifiers in Python**
+You can programmatically check if a string is a valid identifier using the `str.isidentifier()` method.
+
+```python
+print("name".isidentifier())       # True
+print("123name".isidentifier())    # False
+print("for".isidentifier())        # True (but it is a keyword)
+```
+
+To check for keywords:
+```python
+import keyword
+print(keyword.iskeyword("for"))    # True
+print(keyword.iskeyword("name"))   # False
+```
+
+---
+
+### **Summary**
+- Identifiers are names used to define variables, functions, classes, etc.
+- Follow Python's rules and conventions for readability and maintainability.
+- Be cautious with reserved keywords and special cases like underscores.
+
+
+import copy
+
+original = [1, 2, [3, 4]]
+deep_copy = copy.deepcopy(original)
+
+# Modify the inner list in the copy
+deep_copy[2].append(5)
+
+print("Original:", original)     # Output: [1, 2, [3, 4]]
+print("Deep Copy:", deep_copy)   # Output: [1, 2, [3, 4, 5]]

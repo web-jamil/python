@@ -1,0 +1,223 @@
+### **Basic Conditional Syntaxes in Python**
+
+Conditional statements in Python allow you to execute code blocks based on conditions. Here’s a detailed breakdown of all basic conditional syntaxes with examples and descriptions.
+
+---
+
+## **1. `if` Statement**
+
+### **Syntax**:
+```python
+if condition:
+    # Code block to execute if the condition is True
+```
+
+- The `if` statement evaluates the `condition`. If it is `True`, the indented block of code runs.
+- If it is `False`, the block is skipped.
+
+### **Example**:
+```python
+x = 10
+if x > 5:
+    print("x is greater than 5")  # Output: x is greater than 5
+```
+
+---
+
+## **2. `if-else` Statement**
+
+### **Syntax**:
+```python
+if condition:
+    # Code block to execute if the condition is True
+else:
+    # Code block to execute if the condition is False
+```
+
+- The `else` block runs only if the `if` condition is `False`.
+
+### **Example**:
+```python
+x = 3
+if x > 5:
+    print("x is greater than 5")
+else:
+    print("x is not greater than 5")  # Output: x is not greater than 5
+```
+
+---
+
+## **3. `if-elif-else` Statement**
+
+### **Syntax**:
+```python
+if condition1:
+    # Code block if condition1 is True
+elif condition2:
+    # Code block if condition2 is True
+else:
+    # Code block if all conditions are False
+```
+
+- Use `elif` (short for else-if) to check multiple conditions sequentially.
+- The `else` block is optional and runs if none of the conditions are `True`.
+
+### **Example**:
+```python
+x = 10
+if x < 5:
+    print("x is less than 5")
+elif x == 10:
+    print("x is equal to 10")  # Output: x is equal to 10
+else:
+    print("x is greater than 10")
+```
+
+---
+
+## **4. Nested `if` Statements**
+
+### **Syntax**:
+```python
+if condition1:
+    if condition2:
+        # Code block if both condition1 and condition2 are True
+    else:
+        # Code block if condition1 is True and condition2 is False
+else:
+    # Code block if condition1 is False
+```
+
+- You can nest `if` statements to handle more complex logic.
+
+### **Example**:
+```python
+x = 10
+y = 20
+if x > 5:
+    if y > 15:
+        print("Both conditions are True")  # Output: Both conditions are True
+    else:
+        print("Only the first condition is True")
+else:
+    print("The first condition is False")
+```
+
+---
+
+## **5. Ternary Conditional Operator (One-Line `if-else`)**
+
+### **Syntax**:
+```python
+value = true_value if condition else false_value
+```
+
+- A shorthand way to write `if-else` in a single line.
+
+### **Example**:
+```python
+x = 10
+result = "Positive" if x > 0 else "Negative"
+print(result)  # Output: Positive
+```
+
+---
+
+## **6. Logical Operators in Conditions**
+
+### **Syntax with Logical Operators**:
+```python
+if condition1 and condition2:
+    # Code block if both conditions are True
+
+if condition1 or condition2:
+    # Code block if at least one condition is True
+
+if not condition:
+    # Code block if condition is False
+```
+
+- **`and`**: Both conditions must be `True` to execute the block.
+- **`or`**: At least one condition must be `True` to execute the block.
+- **`not`**: Negates the condition.
+
+### **Example**:
+```python
+x, y = 10, 20
+
+if x > 5 and y > 15:
+    print("Both conditions are True")  # Output: Both conditions are True
+
+if x < 5 or y > 15:
+    print("At least one condition is True")  # Output: At least one condition is True
+
+if not (x < 5):
+    print("x is not less than 5")  # Output: x is not less than 5
+```
+
+---
+
+## **7. Membership Operators in Conditions**
+
+### **Syntax**:
+```python
+if item in iterable:
+    # Code block if item is in iterable
+
+if item not in iterable:
+    # Code block if item is not in iterable
+```
+
+- **`in`**: Checks if an item exists in an iterable (e.g., string, list, tuple).
+- **`not in`**: Checks if an item does not exist in an iterable.
+
+### **Example**:
+```python
+word = "apple"
+if "a" in word:
+    print("Found 'a'")  # Output: Found 'a'
+
+if "z" not in word:
+    print("'z' is not in the word")  # Output: 'z' is not in the word
+```
+
+---
+
+## **8. Identity Operators in Conditions**
+
+### **Syntax**:
+```python
+if object1 is object2:
+    # Code block if both objects refer to the same memory location
+
+if object1 is not object2:
+    # Code block if both objects do not refer to the same memory location
+```
+
+- **`is`**: Checks if two objects share the same memory reference.
+- **`is not`**: Checks if two objects do not share the same memory reference.
+
+### **Example**:
+```python
+a = [1, 2, 3]
+b = [1, 2, 3]
+if a is not b:
+    print("Different objects")  # Output: Different objects
+```
+
+---
+
+### **Summary of Conditional Syntax**
+
+| **Statement**    | **Purpose**                                                  | **Example**                                              |
+|-------------------|--------------------------------------------------------------|----------------------------------------------------------|
+| `if`             | Executes a block if the condition is `True`.                 | `if x > 0: print("Positive")`                           |
+| `if-else`        | Executes one block if `True`, another if `False`.            | `if x > 0: ... else: ...`                               |
+| `if-elif-else`   | Checks multiple conditions in order.                         | `if x < 0: ... elif x == 0: ... else: ...`              |
+| Nested `if`      | Executes `if` statements inside other `if` blocks.           | `if x > 0: if y > 0: ...`                               |
+| Ternary Operator | One-line shorthand for `if-else`.                            | `result = "Yes" if x > 0 else "No"`                     |
+| Logical Operators| Combines multiple conditions.                                | `if x > 0 and y > 0: ...`                               |
+| Membership       | Checks if an item exists in or not in an iterable.           | `if "a" in word: ...`                                   |
+| Identity         | Compares objects by memory location.                         | `if a is b: ...`                                        |
+
+These conditionals provide the foundation for controlling the flow of programs in Python.
